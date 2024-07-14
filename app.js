@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var intro = document.querySelector('.intro');
-    var offsetX = 200;
-    var offsetY = 300;
+    var offsetX = 75;
+    var offsetY = 75;
     var mouseX = window.innerWidth / 2;
     var mouseY = window.innerHeight / 2;
 

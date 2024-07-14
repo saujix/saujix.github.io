@@ -3,7 +3,7 @@
 -->✨[My Site](https:saujix.github.io)'✨<--
 
 ## About
-__Look out for the hottest site in the town baby, cause it's lit.__🔥🔥
+_Look out for the hottest site in the town baby, cause it's lit._ 🔥🔥
 
 This site has a collection of my best captured shots, coz instagram is overrated, duh.😗
 Made purely from HTML,CSS and JS.

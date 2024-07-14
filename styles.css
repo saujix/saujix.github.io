@@ -1,0 +1,525 @@
+:root {
+    --opacity:0.2;
+    --opacity-time:10s;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#bgvid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-10;
+    filter:blur(5px);
+    margin:0;
+}
+/* Header Starts */
+
+.header {
+    z-index: 99999;
+    position:fixed;
+    top:1vh;
+    left:100vh;
+}
+
+.nav {
+    margin:20px;
+    width:100vh;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:30px;
+    
+}
+
+.nav:hover {
+    flex-grow: 1;
+}
+
+
+
+.blur {
+    top:0;
+    left:0;
+    width:100%;
+    height:77px;
+    opacity:1;
+    background-color: rgba(149, 146, 146, 0.2); 
+    backdrop-filter: blur(10px);  
+    padding: 0px;
+    position:fixed;
+    z-index: 99;
+    margin:0;
+}
+
+
+.title {
+    position:absolute;
+    left:20px;
+    margin-top:10px;
+    padding-left: 200px;
+    font-family: "Playwrite BE VLG", cursive;
+    font-size: 32px;
+    transition: font-size 2s ease, color 5s ease, transform 2s ease;
+    user-select: none;
+    z-index: 9999999;
+
+}
+.title{
+    position: fixed;
+}
+
+.title:hover {
+    color:gold;
+    transform: translateX(-100px);
+   
+}
+
+.title:active {
+    font-size: 165px;
+    text-wrap: stable;
+
+}
+
+.link {
+    text-decoration: none;
+    font-family: "Playwrite BE VLG", cursive;
+    font-size: 100%;
+    color: black;
+
+}
+
+/* Header Ends */
+/* Body Starts */
+
+.page {
+    background-repeat: no-repeat;
+    z-index: 10;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    overflow-x: hidden;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(15,100px);
+    grid-template-rows: repeat(20,100px);
+    gap: 10px;
+    padding: 10px;
+}
+
+.intro {
+    border: 1px solid;
+    padding: 5px;
+    width:250px;
+    position:absolute;
+    top:120px;
+    left:700px;
+    z-index: 9999;
+    backdrop-filter:blur(20px);
+    font-family: "Oswald";
+    font-size: 20px;
+    text-justify: center;
+    border-radius: 20px;
+    z-index: 99999;  
+
+}
+
+
+.image {
+    border-radius: 20px;
+    
+}
+
+.image-container > .image-1 {
+    grid-area:2/1;
+    border:5px;
+    width:300px;
+    z-index: 0;
+    filter:blur(10px);
+    opacity:var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+              
+}
+.image-1:hover {
+    filter:blur(0px);
+}
+
+.image-container > .image-2 {
+    grid-area:1/4;
+    width:550px;
+    z-index: 3;
+    filter:blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;       
+}
+.image-container > .image-3 {
+    grid-area:6/5;
+    border:5px;
+    width:600px;
+    filter:blur(10px);
+    opacity:var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-4 {
+    grid-area:6/1;
+    border:5px;
+    width:300px;
+    filter:blur(10px);
+    opacity:var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-5 {
+    grid-area:10/1;
+    border:5px;
+    width:600px;
+    filter:blur(10px);
+    opacity:var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-6 {
+    grid-area:8/3;
+    border:5px;
+    width:500px;
+    filter:blur(10px);
+    opacity:var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-7 {
+    grid-area:4/2;
+    border:5px;
+    width:400px;
+    z-index: 2;
+    filter:blur(10px);
+    opacity:var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+.image-container > .image-8 {
+    grid-area:12/3;
+    border:5px;
+    width:400px;
+    z-index: 2;
+    filter:blur(10px);
+    opacity:var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-9 {
+    grid-area:14/8;
+    border:5px;
+    width:600px;
+    z-index: 2;
+    filter:blur(10px);
+    opacity:var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+.image-container > .image-10 {
+    grid-area: 17/6;
+    border: 5px;
+    width: 600px;
+    z-index: 2;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-11 {
+    grid-area: 5/5;
+    border: 5px;
+    width: 320px; 
+    z-index: 3;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-12 {
+    grid-area: 3/8;
+    border: 5px;
+    width: 340px; 
+    z-index: 4;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-13 {
+    grid-area: 10/7;
+    border: 5px;
+    width: 360px; 
+    z-index: 5;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-14 {
+    grid-area: 6/9;
+    border: 5px;
+    width: 380px; 
+    z-index: 6;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-15 {
+    grid-area: 4/10;
+    border: 5px;
+    width: 400px; 
+    z-index: 7;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-16 {
+    grid-area: 8/10;
+    border: 5px;
+    width: 420px; 
+    z-index: 8;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-17 {
+    grid-area: 15/2;
+    border: 5px;
+    width: 440px; 
+    z-index: 9;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+
+
+
+
+.image-container > .image-18 {
+    grid-area: 2/11;
+    border: 5px;
+    width: 460px; 
+    z-index: 90;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-19 {
+    grid-area: 12/11;
+    border: 5px;
+    width: 480px; 
+    z-index: 11;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-20 {
+    grid-area: 6/9;
+    border: 5px;
+    width: 500px; 
+    z-index: 9;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+.image-container > .image-21 {
+    grid-area: 15/10;
+    border: 5px;
+    width: 520px; 
+    z-index: 13;
+    filter: blur(10px);
+    opacity: var(--opacity);
+    transition: opacity var(--opacity-time) ease;
+}
+
+/*  */
+.image-1:hover,
+.image-2:hover,
+.image-3:hover,
+.image-4:hover,
+.image-5:hover,
+.image-6:hover,
+.image-7:hover,
+.image-8:hover,
+.image-9:hover,
+.image-10:hover,
+.image-11:hover,
+.image-12:hover,
+.image-13:hover,
+.image-14:hover,
+.image-15:hover,
+.image-16:hover,
+.image-17:hover,
+.image-18:hover,
+.image-19:hover,
+.image-20:hover,
+.image-21:hover {
+    transition: z-index 1s ease;
+    z-index:10;
+    transition: filter 1s ease;
+    filter:blur(0px);
+    opacity: 1;
+}
+/*  *//*  *//*  *//*  *//*  *//*  */
+/*  *//*  *//*  *//*  *//*  *//*  */
+/*  *//*  *//*  *//*  *//*  *//*  */
+/*  *//*  *//*  *//*  *//*  *//*  */
+/*  *//*  *//*  *//*  *//*  *//*  */
+/*  *//*  *//*  *//*  *//*  *//*  */
+
+
+/* DESCRIPTION IMAGES SPRING ON HOVER */
+
+.desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.desc-1 {
+    position: fixed;
+    z-index: 9999;
+    width: 500px;
+    height: 300px;
+    transition: opacity 1s ease;
+    font-size: 100px;
+    opacity: 0;
+    top:200px ;
+    left:200px ; 
+    
+}
+.desc-2 {
+    position: fixed;
+    z-index: 9999;
+    width: 500px;
+    height: 300px;
+    transition: opacity 1s ease;
+    font-size: 100px;
+    opacity: 0;
+    top: 50px ;     
+    left: 800px ; 
+}
+.desc-3 {
+    position: fixed;
+    z-index: 9999;
+    width: 500px;
+    height: 300px;
+    transition: opacity 1s ease;
+    font-size: 100px;
+    opacity: 0;
+    top:400px;
+    left: 700px ; 
+    color:rgb(44, 44, 44);
+}
+.desc-4 {
+    position: fixed;
+    z-index: 9999;
+    width: 500px;
+    height: 300px;
+    transition: opacity 1s ease;
+    font-size: 80px;
+    opacity: 0;
+    top:300px;     
+    left:500px ; 
+}
+
+
+
+.image-1:hover ~ .desc-1,
+.image-2:hover ~ .desc-2,
+.image-3:hover ~ .desc-4,
+.image-4:hover ~ .desc-1,
+.image-5:hover ~ .desc-1,
+.image-6:hover ~ .desc-2,
+.image-7:hover ~ .desc-2,
+.image-8:hover ~ .desc-4,
+.image-9:hover ~ .desc-2,
+.image-10:hover ~ .desc-2,
+.image-11:hover ~ .desc-3,
+.image-12:hover ~ .desc-3,
+.image-13:hover ~ .desc-3,
+.image-14:hover ~ .desc-3,
+.image-15:hover ~ .desc-3,
+.image-16:hover ~ .desc-3,
+.image-17:hover ~ .desc-3,
+.image-18:hover ~ .desc-3,
+.image-19:hover ~ .desc-3,
+.image-20:hover ~ .desc-3,
+.image-21:hover ~ .desc-1 {
+    opacity: 1;
+    z-index: 99;
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  */
+/*  *//*  *//*  *//*  *//*  *//*  */
+/*  *//*  *//*  *//*  *//*  *//*  */
+/*  *//*  *//*  *//*  *//*  *//*  */
+/*  *//*  *//*  *//*  *//*  *//*  */
+
+
+
+.blur_footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    margin:0;
+    width: 100%;
+    z-index: 999;
+    background-color:white ;
+    opacity: 0.2;
+    padding:5px;
+
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    z-index: 9999;
+    color: black;
+    font-family: oswald;
+    padding:5px;
+    user-select: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+

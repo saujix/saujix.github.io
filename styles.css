@@ -39,8 +39,6 @@ body {
     flex-grow: 1;
 }
 
-
-
 .blur {
     top:0;
     left:0;
@@ -55,7 +53,6 @@ body {
     margin:0;
 }
 
-
 .title {
     position:fixed;
     left:1vw;
@@ -68,9 +65,8 @@ body {
     user-select: none;
     z-index: 9999999;
     color:white;
-    
-
 }
+
 .title{
     position: fixed;
 }
@@ -87,10 +83,6 @@ body {
     transform: translatey(200px);
     transform: translatex(-50px);
 
-}
-
-.title:active ~ body {
-    filter:blur(100px);
 }
 
 .link {
@@ -493,8 +485,6 @@ body {
     font-size: 4.5vw;
 }
 
-
-
 .image-1:hover ~ .desc-1,
 .image-2:hover ~ .desc-2,
 .image-3:hover ~ .desc-4,
@@ -529,8 +519,6 @@ body {
 /*  *//*  *//*  *//*  *//*  *//*  */
 /*  *//*  *//*  *//*  *//*  *//*  */
 
-
-
 .blur_footer{
     position: fixed;
     bottom:0;
@@ -543,9 +531,6 @@ body {
     padding:5px;
 
 }
-
-
-
 .footer {
     position: fixed;
     bottom:0;
@@ -559,11 +544,3 @@ body {
     padding:5px;
     user-select: none;
 }
-
-
-
-
-
-
-
-

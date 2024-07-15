@@ -12,26 +12,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 2500px;
-    cursor: url('img/personal/cursor.png'), auto;
+    background-color: rgb(24, 26, 27);
 }
 
-#bgvid {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index:-10;
-    filter:blur(5px);
-    margin:0;
-}
 /* Header Starts */
 
 .header {
     z-index: 99999;
     position:fixed;
-    top:1vh;
+    margin-top: 7vh;
     left:100vh;
+    font-size: 1.4vw;
 }
 
 .nav {
@@ -54,9 +45,9 @@ body {
     top:0;
     left:0;
     width:100%;
-    height:77px;
+    height:8vh;
     opacity:1;
-    background-color: rgba(149, 146, 146, 0.2); 
+    background-color: rgba(46, 46, 46, 0.2); 
     backdrop-filter: blur(10px);  
     padding: 0px;
     position:fixed;
@@ -66,16 +57,17 @@ body {
 
 
 .title {
-    position:absolute;
-    left:20px;
-    margin-top:10px;
+    position:fixed;
+    left:1vw;
+    margin-top:60px ;
     padding-left: 200px;
     padding-right: 200px;
     font-family: "Playwrite BE VLG", cursive;
-    font-size: 32px;
+    font-size: 4vh;
     transition: font-size 2s ease, color 5s ease, transform 2s ease;
     user-select: none;
     z-index: 9999999;
+    color:white;
     
 
 }
@@ -105,22 +97,12 @@ body {
     text-decoration: none;
     font-family: "Playwrite BE VLG", cursive;
     font-size: 100%;
-    color: black;
+    color:#d8d4cf;
 
 }
 
 /* Header Ends */
 /* Body Starts */
-
-.page {
-    background-repeat: no-repeat;
-    z-index: 10;
-    width:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    overflow-x: hidden;
-}
 
 .image-container {
     display: grid;
@@ -382,7 +364,7 @@ body {
 }
 
 .image-container > .image-22 {
-    grid-area: 20/6;
+    grid-area: 21/6;
     border: 5px;
     width:700px; 
     z-index: 13;
@@ -393,7 +375,7 @@ body {
 }
 
 .image-container > .image-23 {
-    grid-area:21/1 ;
+    grid-area:20/1 ;
     border: 5px;
     width: 600px; 
     z-index: 13;
@@ -454,74 +436,61 @@ body {
     padding: 10px;
     pointer-events: none;
     opacity: 0.1;
+    z-index: 9999;
 }
 
 .desc-1 {
     position: fixed;
-    z-index: 9999;
-    width: 500px;
-    height: 300px;
     transition: opacity 5s ease;
-    font-size: 100px;
+    font-size: 6.5vw;
     opacity: 0.1;
-    top:175px ;
-    left:200px ; 
+    top:9.1vh ;
+    left:1.5vw ; 
     z-index: -1;
-    color:rgb(0, 0, 0);
+    color:rgb(236, 236, 236);
     
 }
 .desc-2 {
     position: fixed;
-    z-index: 9999;
-    width: 500px;
-    height: 250px;
     transition: opacity 5s ease;
-    font-size: 100px;
-    opacity: 0.1;
-    top: 50px ;     
-    left: 750px ;
+    font-size: 5vw;
+    opacity: 0.2;
+    top: 0.1vh ;     
+    left: 50vw ;
     z-index: -1; 
-    color:rgb(72, 57, 0);
+    color:rgb(231, 220, 232);
 }
 .desc-3 {
     position: fixed;
-    z-index: 9999;
-    width: 500px;
-    height: 300px;
     transition: opacity 5s ease;
-    font-size: 100px;
+    font-size: 6vw;
     opacity: 0.1;
-    top:455px;
-    left: 700px ;
+    top:40vh;
+    left: 30vw ;
     z-index: -1; 
-    color:rgb(3, 42, 0);
+    color:#d8d4cf;
+    padding: 10vh;
 }
 .desc-4 {
     position: fixed;
-    z-index: 9999;
-    width: 500px;
-    height: 300px;
     transition: opacity 5s ease;
-    font-size: 80px;
-    opacity: 0.1;
-    top:315px;     
-    left:530px;
+    font-size: 6vw;
+    opacity: 0.2;
+    top:30.5vh;     
+    left:14vw;
     z-index: -1;
     color:rgb(227, 205, 231);
 }
 
 .desc-5 {
     position: fixed;
-    z-index: 9999;
-    width: 500px;
-    height: 300px;
     transition: opacity 5s ease;
-    font-size:70px;
-    opacity: 0.1;
-    top:195px;     
-    left:945px;
+    opacity: 0.2;
+    top:22.1vh;     
+    left:59vw;
     z-index: -1;
-    color:azure;
+    color:#d8f3d6;
+    font-size: 4.5vw;
 }
 
 
@@ -569,7 +538,7 @@ body {
     margin:0;
     width: 100%;
     z-index: 999;
-    background-color:white ;
+    background-color:rgb(45, 45, 45) ;
     opacity: 0.2;
     padding:5px;
 
@@ -585,7 +554,7 @@ body {
     text-align: center;
     backdrop-filter: blur(20px);
     z-index: 9999;
-    color: black;
+    color: rgb(255, 255, 255);
     font-family: oswald;
     padding:5px;
     user-select: none;

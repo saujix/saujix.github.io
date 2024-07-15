@@ -3,8 +3,6 @@
     --opacity-time:5s;
 }
 
-
-
 body {
     margin: 0;
     padding: 0;
@@ -39,8 +37,6 @@ body {
     flex-grow: 1;
 }
 
-
-
 .blur {
     top:0;
     left:0;
@@ -55,7 +51,6 @@ body {
     margin:0;
 }
 
-
 .title {
     position:fixed;
     left:1vw;
@@ -68,7 +63,6 @@ body {
     user-select: none;
     z-index: 9999999;
     color:white;
-    
 
 }
 .title{
@@ -98,7 +92,6 @@ body {
     font-family: "Playwrite BE VLG", cursive;
     font-size: 100%;
     color:#d8d4cf;
-
 }
 
 /* Header Ends */
@@ -127,11 +120,8 @@ body {
     z-index: 99999;  
 
 }
-
-
 .image {
-    border-radius: 20px;
-    
+    border-radius: 20px;    
 }
 
 .image-container > .image-1 {
@@ -146,6 +136,7 @@ body {
     transition: border-color 0.3s ease;
               
 }
+
 .image-1:hover {
     filter:blur(0px);
     
@@ -538,6 +529,7 @@ body {
     font-style: normal;
     z-index: 9999999;
     opacity: 0.7;
+    user-select:none;
 }
 .desc_1_dec {
     position: fixed;

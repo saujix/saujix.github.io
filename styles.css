@@ -429,6 +429,7 @@ body {
     pointer-events: none;
     opacity: 0.1;
     z-index: 9999;
+    z-index: -1;
 }
 
 .desc-1 {
@@ -438,7 +439,6 @@ body {
     opacity: 0.1;
     top:9.1vh ;
     left:1.5vw ; 
-    z-index: -1;
     color:rgb(236, 236, 236);
     
 }
@@ -449,7 +449,6 @@ body {
     opacity: 0.2;
     top: 0.1vh ;     
     left: 50vw ;
-    z-index: -1; 
     color:rgb(231, 220, 232);
 }
 .desc-3 {
@@ -459,9 +458,7 @@ body {
     opacity: 0.1;
     top:40vh;
     left: 30vw ;
-    z-index: -1; 
     color:#d8d4cf;
-    padding: 10vh;
 }
 .desc-4 {
     position: fixed;
@@ -470,7 +467,6 @@ body {
     opacity: 0.2;
     top:30.5vh;     
     left:14vw;
-    z-index: -1;
     color:rgb(227, 205, 231);
 }
 
@@ -480,7 +476,6 @@ body {
     opacity: 0.2;
     top:22.1vh;     
     left:59vw;
-    z-index: -1;
     color:#d8f3d6;
     font-size: 4.5vw;
 }
@@ -529,6 +524,7 @@ body {
     font-style: normal;
     z-index: 9999999;
     opacity: 0.7;
+    z-index: 9;
     user-select:none;
 }
 .desc_1_dec {
@@ -536,7 +532,6 @@ body {
     font-size: 2vw;
     top:33vh ;
     left:15vw ; 
-    z-index: 9;
     color:rgb(254, 253, 253);
     
 }
@@ -544,8 +539,7 @@ body {
     position: fixed;
     font-size: 1vw;
     top:23vh ;
-    left:65vw ; 
-    z-index: 9;
+    left:65vw ;
     color:rgb(157, 157, 158);
     
 }
@@ -554,7 +548,6 @@ body {
     font-size: 1vw;
     top:77vh ;
     left:60vw ; 
-    z-index: 9;
     color:rgb(119, 132, 117);
     
 }
@@ -563,7 +556,6 @@ body {
     font-size: 1vw;
     top:57vh ;
     left:30vw ; 
-    z-index: 9;
     color:rgb(248, 164, 164);
     
 }
@@ -572,7 +564,6 @@ body {
     font-size: 1vw;
     top:42vh ;
     left:70vw ; 
-    z-index: 9;
     color:rgb(122, 124, 101);   
 }
 

@@ -1,6 +1,6 @@
 # My Website
 
--->✨[My Site](https:saujix.github.io)'✨<--
+-->✨[My Site](https://saujix.github.io)'✨<--
 
 ## About
 _Look out for the hottest site in the town baby, cause it's lit._ 🔥🔥
@@ -19,3 +19,8 @@ Made purely from HTML,CSS and JS.
 1. Disable any third party dark night apps, they will break the website.
 2. Has some javascript components, so enable that in your browser.
 3. This is my first website so dont judge.
+
+### Working on:
+- Support for mobile phones and desktop of any resolution.
+- Possibly some more creativity.
+- Will learn a bit more JS for drop-down menu.

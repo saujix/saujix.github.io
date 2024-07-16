@@ -63,3 +63,37 @@ title.addEventListener('mouseout', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const easeInOutQuad = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+  const scrollTo = (element, to, duration) => {
+      const start = element.scrollTop;
+      const change = to - start;
+      let currentTime = 0;
+      const increment = 20;
+
+      const animateScroll = () => {
+          currentTime += increment;
+          const val = easeInOutQuad(currentTime / duration);
+          element.scrollTop = start + change * val;
+          if (currentTime < duration) {
+              setTimeout(animateScroll, increment);
+          }
+      };
+
+      animateScroll();
+  };
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+              scrollTo(document.documentElement, target.offsetTop, 600);
+          }
+      });
+  });
+});
+
+
+

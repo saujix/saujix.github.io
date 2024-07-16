@@ -412,70 +412,88 @@ body {
 /*  *//*  *//*  *//*  *//*  *//*  */
 
 
-/* DESCRIPTION IMAGES SPRING ON HOVER */
+/* DESCRIPTION IMAGES SPRING ON HOVER MA BOIIIII */
 
 .desc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     box-sizing: border-box;
     padding: 10px;
     pointer-events: none;
     opacity: 0.1;
     z-index: 9999;
-    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.desc-1,
+.desc-2,
+.desc-3,
+.desc-4,
+.desc-5 {
+    position: fixed;
+    transition: all 1s ease;
 }
 
 .desc-1 {
-    position: fixed;
-    transition: opacity 5s ease;
     font-size: 6.5vw;
-    opacity: 0.1;
-    top:9.1vh ;
-    left:1.5vw ; 
-    color:rgb(236, 236, 236);
-    
+    top: 9.1vh;
+    left: 1.5vw;
+    color: rgb(236, 236, 236);
 }
+
 .desc-2 {
-    position: fixed;
-    transition: opacity 5s ease;
     font-size: 5vw;
-    opacity: 0.2;
-    top: 0.1vh ;     
-    left: 50vw ;
-    color:rgb(231, 220, 232);
+    top: 0.1vh;
+    left: 50vw;
+    color: rgb(231, 220, 232);
 }
+
 .desc-3 {
-    position: fixed;
-    transition: opacity 5s ease;
     font-size: 6vw;
-    opacity: 0.1;
-    top:49vh;
-    left: 30vw ;
-    color:#d8d4cf;
+    top: 49vh;
+    left: 30vw;
+    color: #d8d4cf;
 }
+
 .desc-4 {
-    position: fixed;
-    transition: opacity 5s ease;
     font-size: 6vw;
-    opacity: 0.2;
-    top:30.5vh;     
-    left:14vw;
-    color:rgb(227, 205, 231);
+    top: 30.5vh;
+    left: 14vw;
+    color: rgb(227, 205, 231);
 }
 
 .desc-5 {
-    position: fixed;
-    transition: opacity 5s ease;
-    opacity: 0.2;
-    top:22.1vh;     
-    left:59vw;
-    color:#d8f3d6;
     font-size: 4.5vw;
+    top: 22.1vh;
+    left: 59vw;
+    color: #d8f3d6;
 }
 
-
+.image-1:hover ~ .desc,
+.image-2:hover ~ .desc,
+.image-3:hover ~ .desc,
+.image-4:hover ~ .desc,
+.image-5:hover ~ .desc,
+.image-6:hover ~ .desc,
+.image-7:hover ~ .desc,
+.image-8:hover ~ .desc,
+.image-9:hover ~ .desc,
+.image-10:hover ~ .desc,
+.image-11:hover ~ .desc,
+.image-12:hover ~ .desc,
+.image-13:hover ~ .desc,
+.image-14:hover ~ .desc,
+.image-15:hover ~ .desc,
+.image-16:hover ~ .desc,
+.image-17:hover ~ .desc,
+.image-18:hover ~ .desc,
+.image-19:hover ~ .desc,
+.image-20:hover ~ .desc,
+.image-21:hover ~ .desc,
+.image-22:hover ~ .desc,
+.image-23:hover ~ .desc {
+    opacity: 0.1;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+}
 
 .image-1:hover ~ .desc-1,
 .image-2:hover ~ .desc-2,
@@ -501,9 +519,11 @@ body {
 .image-22:hover ~ .desc-5,
 .image-23:hover ~ .desc-5 {
     opacity: 1;
+    transform: scale(1.2);
     z-index: 99;
-    transition: all 2s ease;
+    transition: all 0.5s ease;
 }
+
 
 /*  *//*  *//*  *//*  *//*  *//*  */
 /*  *//*  *//*  *//*  *//*  *//*  */

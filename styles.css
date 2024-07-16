@@ -162,7 +162,7 @@ body {
 }
 
 .image-container > .image-4 {
-    grid-area:6/1;
+    grid-area:6/2;
     border:5px;
     width:500px;
     filter:blur(10px);

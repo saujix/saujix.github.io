@@ -125,7 +125,7 @@ body {
 }
 
 .image-container > .image-1 {
-    grid-area:2/1;
+    grid-area:2/2;
     width:500px;
     z-index: 0;
     filter:blur(10px);
@@ -135,11 +135,6 @@ body {
     box-sizing: border-box;
     transition: border-color 0.3s ease;
               
-}
-
-.image-1:hover {
-    filter:blur(0px);
-    
 }
 
 .image-container > .image-2 {
@@ -366,7 +361,7 @@ body {
 }
 
 .image-container > .image-23 {
-    grid-area:20/1 ;
+    grid-area:20/2 ;
     border: 5px;
     width: 600px; 
     z-index: 13;

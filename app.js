@@ -95,5 +95,28 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const cursor = document.querySelector('.cursor');
+
+  function updateCursorPosition(event) {
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+
+      if (screenWidth <= 600) {
+          const centerX = screenWidth / 2;
+          const centerY = screenHeight / 2;
+          cursor.style.left = centerX + 'px';
+          cursor.style.top = centerY + 'px';
+      }
+  }
+
+  document.addEventListener('mousemove', updateCursorPosition);
+  window.addEventListener('resize', updateCursorPosition);
+
+  // Initial call to set cursor position on page load
+  updateCursorPosition();
+});
+
+
 
 

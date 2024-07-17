@@ -649,9 +649,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        border:4px solid rgb(255, 0, 0);
         overflow-x: hidden;
-        size:calc(100%-20px);
 
     }
 
@@ -737,3 +735,4 @@ body {
         opacity: 1;
         transform: scale(1.1);    
     }
+}

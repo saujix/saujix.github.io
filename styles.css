@@ -11,7 +11,6 @@ body {
     align-items: center;
     height: 2500px;
     background-color: rgb(24, 26, 27);
-    overflow-x: hidden;
 }
 
 /* Header Starts */
@@ -24,7 +23,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
     width:100%;
     height:8vh;
 }
@@ -631,9 +629,9 @@ body {
 
 @media screen and (max-width:600px) {
     
-    html {
-        overflow-y:visible;
-        overflow-y: hidden;
+    body {
+        overflow-x:hidden; 
+ 
     }
 
     .link {
@@ -642,33 +640,25 @@ body {
 
     
     .page {
-        background-image: url(img/personal/background/Art.jpg);   
+        background-image: url(img/personal/background/Art.jpg);
+        width:100%;  
     }
 
-    body::-webkit-scrollbar {
-        display: none;
-    }
 
     .image-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         border:4px solid rgb(255, 0, 0);
-        margin-top: 20px;
+        overflow-x: hidden;
+        size:calc(100%-20px);
 
     }
-
-
 
     .title {
         font-size:20px;
     }
-
-
-    .desc {
-        opacity: 0.3;
-        left:0;
-    }    
+  
 
     .desc-1 {
         position: fixed;
@@ -705,14 +695,11 @@ body {
         font-size: 7vw;
     }
 
-    .body {
-        height:3000px;
+    .image-1:hover,
+    .image-2, {
+        width:20%;
     }
-
-    .image-1{
-        opacity: (1);
-    }
-   
+    
 }
 
 

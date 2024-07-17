@@ -521,13 +521,11 @@ body {
 .image-22:hover ~ .desc-5,
 .image-23:hover ~ .desc-5 {
     opacity: 1;
-    transform: scale(2);
+    transform: scale(1.2);
     z-index: 999;
     transition: all 0.5s ease;
     position: fixed;
     justify-content: center;
-    left:50vw;
-    overflow-x: wrap;
 }
 
 
@@ -647,6 +645,7 @@ body {
 }
 
 @media screen and (max-width:600px) {
+    
     html {
         height:100%;
         width: 100%;
@@ -662,7 +661,12 @@ body {
     }
     .page {
         width:100%;
-        justify-content: center;
+        background-size: auto;
+        background-image: url(img/personal/background/Art.jpg);
+        background-repeat:repeat-y;
+        gap: 0;
+        
+        
     }
 
     body::-webkit-scrollbar {
@@ -689,6 +693,36 @@ body {
     img {
         width:100%;
     }
+
+    .image-1:hover ~ .desc-1,
+    .image-2:hover ~ .desc-2,
+    .image-3:hover ~ .desc-4,
+    .image-4:hover ~ .desc-1,
+    .image-5:hover ~ .desc-1,
+    .image-6:hover ~ .desc-2,
+    .image-7:hover ~ .desc-2,
+    .image-8:hover ~ .desc-4,
+    .image-9:hover ~ .desc-2,
+    .image-10:hover ~ .desc-2,
+    .image-11:hover ~ .desc-3,
+    .image-12:hover ~ .desc-3,
+    .image-13:hover ~ .desc-3,
+    .image-14:hover ~ .desc-3,
+    .image-15:hover ~ .desc-3,
+    .image-16:hover ~ .desc-3,
+    .image-17:hover ~ .desc-3,
+    .image-18:hover ~ .desc-3,
+    .image-19:hover ~ .desc-3,
+    .image-20:hover ~ .desc-3,
+    .image-21:hover ~ .desc-1,
+    .image-22:hover ~ .desc-5,
+    .image-23:hover ~ .desc-5 {
+        opacity: 1;
+        transform: scale(1.2);
+        z-index: 999;
+        transition: all 1s ease;
+        justify-content: center;
+}
 
     
 }

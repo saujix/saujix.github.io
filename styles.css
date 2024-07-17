@@ -636,10 +636,6 @@ body {
         overflow-y: hidden;
     }
 
-    .header {
-        
-    }
-
     .link {
         font-size: 10px;
     }
@@ -661,6 +657,7 @@ body {
         margin-top: 20px;
 
     }
+
 
 
     .title {
@@ -717,3 +714,5 @@ body {
     }
    
 }
+
+

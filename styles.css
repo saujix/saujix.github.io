@@ -635,7 +635,7 @@ body {
     }
 
     .link {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     
@@ -650,13 +650,12 @@ body {
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
-
     }
 
     .title {
-        font-size:20px;
+        font-size:30px;
+        
     }
-
     .desc {
         
     }
@@ -666,7 +665,7 @@ body {
         writing-mode: vertical-rl;
         position: fixed;
         top:18vh;
-        left:1px;
+        margin-left: 0px;
         opacity: 1;
         font-size: 11vw;
     }
@@ -694,7 +693,7 @@ body {
         
         position: fixed;
         top:40vh;
-        left:45vw;
+        left:40vw;
         color: rgb(38, 97, 91);
         opacity: 1;
         font-size: 15vw;
@@ -703,9 +702,9 @@ body {
     .desc-5 {
         position: fixed;
         top:27vh;
-        left:35vw;
+        left:37vw;
         color: rgb(130, 83, 34);
-        font-size: 7vw;
+        font-size: 6.5vw;
         opacity: 1;
     }
 

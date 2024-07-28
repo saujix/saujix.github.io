@@ -451,7 +451,11 @@ body {
 /* DESCRIPTION IMAGES SPRING ON HOVER MA BOIIIII */
 
 .desc {
+    margin-top: 0;
+    height: 100%;
     pointer-events: none;
+    position: fixed;
+    top:0;
     opacity: 0.1;
     z-index: 1;
     transition: all 0.5s ease;
@@ -462,45 +466,46 @@ body {
 .desc-3,
 .desc-4,
 .desc-5 {
-    position: fixed;
-    margin:0;
     transition: all 1s ease;
+    
 }
 
 .desc-1 {
     font-size: 6.3vw;
-    top: 7.5vh;
+    top: 6vh;
     left: 3vw;
-    color: rgb(36, 25, 25);
+    color: rgb(0, 0, 0);
     margin-left:10px;
 }
 
 .desc-2 {
     font-size: 5vw;
-    top: 0px;
+    top:0vh;
     left: 50vw;
-    color: rgb(147, 8, 159);
+    color: rgb(0, 0, 0);
 }
 
 .desc-3 {
+    position: fixed;
     font-size: 6vw;
-    top: 49vh;
+    top: 46vh;
     left: 30vw;
-    color: #301b00;
+    color: #000000;
+    z-index: 99999;
 }
 
 .desc-4 {
     font-size: 6vw;
-    top: 30.5vh;
+    top: 27.5vh;
     left: 14vw;
-    color: rgb(227, 205, 231);
+    color: rgb(0, 0, 0);
 }
 
 .desc-5 {
     font-size: 4.2vw;
     top: 35vh;
     left: 58vw;
-    color: #d8f3d6;
+    color: #000000;
 }
 
 .image-1:hover ~ .desc,

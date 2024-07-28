@@ -8,26 +8,28 @@
     left: -5px;
     width: 10px;
     height: 10px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
     pointer-events: none;
     z-index: 999;
 }
 
 #cursor-border {
-    --size: 50px;
+    --size: 200px;
     position: fixed;
     top: calc(var(--size) / -2);
     left: calc(var(--size) / -2);
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    box-shadow: 0 0 0 1px white;
     pointer-events: none;
     transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
     height 0.15s ease-out, background-color 0.15s ease-out;
     z-index: 999;
+    backdrop-filter:invert(1);
+    z-index: 100000000;
 }
+
 
 
 body {
@@ -37,7 +39,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 2500px;
-    cursor: none;    
+    cursor: none;  
+    backdrop-filter:inver(1);  
 }
 
 .circle {
@@ -153,7 +156,7 @@ body {
     transition: opacity var(--opacity-time) ease;
     border: 2px solid transparent;
     box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 
               
 }
@@ -162,49 +165,49 @@ body {
     grid-area:2/4;
     width:550px;
     z-index: 3;
-    filter:blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease;       
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;       
 }
 .image-container > .image-3 {
     grid-area:6/5;
     border:5px;
     width:600px;
-    filter:blur(10px);
+    filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-4 {
     grid-area:6/2;
     border:5px;
     width:500px;
-    filter:blur(10px);
+    filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-5 {
     grid-area:10/1;
     border:5px;
     width:600px;
-    filter:blur(10px);
+    filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-6 {
     grid-area:8/3;
     border:5px;
     width:500px;
-    filter:blur(10px);
+    filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-7 {
@@ -212,20 +215,20 @@ body {
     border:5px;
     width:400px;
     z-index: 2;
-    filter:blur(10px);
+    filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 .image-container > .image-8 {
     grid-area:12/3;
     border:5px;
     width:400px;
     z-index: 2;
-    filter:blur(10px);
+    filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-9 {
@@ -233,20 +236,20 @@ body {
     border:5px;
     width:600px;
     z-index: 2;
-    filter:blur(10px);
+    filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 .image-container > .image-10 {
     grid-area: 17/6;
     border: 5px;
     width: 600px;
     z-index: 2;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-11 {
@@ -254,10 +257,10 @@ body {
     border: 5px;
     width: 400px; 
     z-index: 3;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-12 {
@@ -265,10 +268,10 @@ body {
     border: 5px;
     width: 500px; 
     z-index: 4;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-13 {
@@ -276,10 +279,10 @@ body {
     border: 5px;
     width: 360px; 
     z-index: 5;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-14 {
@@ -287,21 +290,20 @@ body {
     border: 5px;
     width: 380px; 
     z-index: 6;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
-
 .image-container > .image-15 {
     grid-area: 4/10;
     border: 5px;
     width: 400px; 
     z-index: 7;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-16 {
@@ -309,10 +311,10 @@ body {
     border: 5px;
     width: 420px; 
     z-index: 8;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-17 {
@@ -320,10 +322,10 @@ body {
     border: 5px;
     width: 440px; 
     z-index: 9;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-18 {
@@ -331,10 +333,10 @@ body {
     border: 5px;
     width: 460px; 
     z-index: 90;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-19 {
@@ -342,10 +344,10 @@ body {
     border: 5px;
     width: 480px; 
     z-index: 11;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-20 {
@@ -353,10 +355,10 @@ body {
     border: 5px;
     width: 500px; 
     z-index: 9;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-21 {
@@ -364,10 +366,10 @@ body {
     border: 5px;
     width: 520px; 
     z-index: 13;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-22 {
@@ -375,10 +377,10 @@ body {
     border: 5px;
     width:700px; 
     z-index: 13;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
 }
 
 .image-container > .image-23 {
@@ -386,10 +388,10 @@ body {
     border: 5px;
     width: 600px; 
     z-index: 13;
-    filter: blur(10px);
+    filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease;
+    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
     margin-bottom:10vh;
 }
 
@@ -424,6 +426,7 @@ body {
     opacity: 1;
     border:50px solid rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    filter:invert(2);
 }
 /*  *//*  *//*  *//*  *//*  *//*  */
 /*  *//*  *//*  *//*  *//*  *//*  */
@@ -512,7 +515,7 @@ body {
 .image-21:hover ~ .desc,
 .image-22:hover ~ .desc,
 .image-23:hover ~ .desc {
-    opacity: 0.5;
+    opacity: 0.1;
     transform: scale(0.9);
     transition: all 0.5s ease;
 }
@@ -543,7 +546,7 @@ body {
     opacity: 1;
     transform: scale(1.09);
     z-index: 999999;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     position: fixed;
     justify-content: center;
 }

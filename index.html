@@ -27,11 +27,11 @@
 <body>
     <div id="cursor"></div>
     <div id="cursor-border"></div>
-    <video class = 'bg_vid' src="img/personal/background/body_bg.mp4" autoplay loop muted></video>
-    <div class="page">        
-        <div class="header">
-            <div class="title" onclick="isHeightok()" onmouseenter="reduceCursor()" onmouseleave="defaultCursor()"><span class="hover-bold">A</span><span class="hover-bold">k</span><span class="hover-bold">s</span><span class="hover-bold">h</span><span class="hover-bold">a</span><span class="hover-bold">t</span></div>
-            <div class="nav" onmouseenter="reduceCursor()" onmouseleave="defaultCursor()">
+    <video class = 'bg_vid' src="img/personal/background/body_bg.mp4" autoplay loop muted></video>  
+    <div class="page"> 
+        <div class="header" onmouseenter="dropDown()" onmouseleave="defaultCursor(); dropOut()">
+            <div class="title" onclick="isHeightok(); reduceCursor()" onmouseenter="randomChar(); removeCursor() ; defaultCursor()" onmouseleave="restoreCursor(); reduceCursor()"><span class="hover-bold">A</span><span class="hover-bold">k</span><span class="hover-bold">s</span><span class="hover-bold">h</span><span class="hover-bold">a</span><span class="hover-bold">t</span></div>
+            <div class="nav">
                 <a class="link link-1" href="https://youtu.be/dQw4w9WgXcQ?si=3bnDskVJSzVgefmT">About</a>
                 <a class="link link-2" href="https://youtu.be/dQw4w9WgXcQ?si=3bnDskVJSzVgefmT">Me</a>
                 <a class="link link-3" href="https://youtu.be/dQw4w9WgXcQ?si=3bnDskVJSzVgefmT">Contact</a>
@@ -65,26 +65,24 @@
                     <img class="image image-21" src="img/personal/17.jpg">
                     <img class="image image-22" src="img/personal/20.jpg">
                     <img class="image image-23" src="img/personal/21.jpg">
+                    <!--  -->
+                    <div class="desc desc-1">Dehradun</div>
+                    <div class="desc desc-2">Lohaghat</div>
+                    <div class="desc desc-3">Pithoragarh</div> 
+                    <div class="desc desc-4">Banbasa</div> 
+                    <div class="desc desc-5">Haridwar</div>
+                </div>
 
-                    <div class="desc desc-1"><h1>Dehradun</h1></div>
-                    <div class="dec desc_1_dec"><h1>dehradun</h1></div>
-                    <div class="desc desc-2"><h1>Lohaghat</h1></div>
-                    <div class="dec desc_2_dec"><h1>lohaghat</h1></div>
-                    <div class="desc desc-3"><h1>Pithoragarh</h1></div> 
-                    <div class="dec desc_3_dec"><h1>pithoragarh</h1></div> 
-                    <div class="desc desc-4"><h1>Banbasa</h1></div> 
-                    <div class="dec desc_4_dec"><h1>banbasa</h1></div> 
-                    <div class="desc desc-5"><h1>Haridwar</h1></div>
-                    <div class="dec desc_5_dec"><h1>haridwar</h1></div>           
+                <div class="hidden_menu">
+                    <ol class="menu">
+                        <li><a href="https://youtube.com"> Youtube</a></li>
+                        <li><a href="#"> Instagram</a></li>
+                        <li><a href="#"> Pinterest</a></li>
+                        <li><a href="#"> Reddit</a></li>
+                    </ol>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <div class="footer__text">
-                © Saujix (2024)
-            </div>
-        </div>
-        <div class="blur_footer">:)</div>
     </div>
     <script src="app.js"></script>
 </body>

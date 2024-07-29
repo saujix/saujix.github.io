@@ -1,3 +1,4 @@
+
 const cursor = document.querySelector("#cursor");
 const cursorBorder = document.querySelector("#cursor-border");
 const cursorPos = { x: 0, y: 0 };
@@ -22,7 +23,7 @@ requestAnimationFrame(function loop() {
 
 function isHeightok() {
   if (document.querySelector('.header').style.height === '100vh'){
-    document.querySelector('.header').style.height='6vh';
+    document.querySelector('.header').style.height='1vh';
     document.querySelector('.header').style.backdropFilter='blur(0px)';
     document.querySelector('.header').style.backgroundColor='transparent';
     document.querySelector('.nav').style.opacity='100';
@@ -67,3 +68,42 @@ function removeCursor(){
 function restoreCursor(){
   document.querySelector('#cursor').style.opacity='1';
 }
+
+let t='';
+document.querySelector('.image-container').addEventListener('click', function(event) {
+  if (event.target.tagName === 'IMG') {
+
+    console.log();
+    if (getComputedStyle(document.querySelector(`#${event.target.id}`)).filter === 'invert(1)'){
+      console.log('Clicked image class:', event.target.id);
+      t = `#${event.target.id}`;
+      console.log(`#${event.target.id}`)
+      document.querySelector(`#${event.target.id}`).style.filter = 'invert(0)';
+      restoreCursor();
+      document.querySelector('#cursor-border').style.opacity = '0';
+    } else if (getComputedStyle(document.querySelector(`#${event.target.id}`)).filter === 'invert(0)'){
+      console.log('Clicked image class:', event.target.id);
+      t = `#${event.target.id}`;
+      console.log(`#${event.target.id}`)
+      document.querySelector(`#${event.target.id}`).style.filter = 'invert(1)';
+      removeCursor();
+      document.querySelector('#cursor-border').style.opacity = '1';
+    }
+      
+
+  } else {
+    alert('nigga_what_you_tryna_click_ma_nigga?')
+  }
+}
+)
+
+function restoreInvert(){
+  if (t === ''){
+  
+  } else {
+    document.querySelector(t).style.filter = 'invert(1)';
+    console.log(t);
+  }
+  
+}
+

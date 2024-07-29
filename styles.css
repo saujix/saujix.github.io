@@ -1,17 +1,31 @@
 :root {
     --opacity:0;
     --opacity-time:2s;
+    --headerelem: rgb(17, 17, 17);
+    --header-fontsize_title:70px;
+    --header-fontsize_links:4vh;
 }
+
+@font-face {
+    font-family: 'rogshire';
+    src: url(fonts/Rogshiredemo.ttf) format('truetype');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 #cursor {
     position: fixed;
     top: -5px;
     left: -5px;
     width: 10px;
     height: 10px;
-    background-color: rgb(101, 100, 19);
+    background-color: rgb(0, 0, 0);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999999;
+    transition: opacity 0.2s ease;
 }
 
 #cursor-border {
@@ -23,9 +37,8 @@
     border-radius: 50%;
     pointer-events: none;
     transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out;
-    z-index: 999;
+    z-index: 9999999999;
     backdrop-filter:invert(1);
-    z-index: 1000000;
     transition: width 0.5s, height 0.5s,top 0.5s, left 0.5s, opacity 1s ;
 }
 
@@ -39,15 +52,6 @@ body {
     align-items: center;
     height: 2500px;
     cursor: none;  
-    backdrop-filter:inver(1);  
-}
-
-.circle {
-    position: absolute;
-    border: solid 1px #000000;
-	width: 60px; 
-	height: 60px; 
-    border-radius: 50%; 
 }
 
 ::-webkit-scrollbar {
@@ -58,7 +62,6 @@ body {
     height:150vh;
     position: fixed;
     top:0px;
-    filter:blur(10px);
     z-index: 1;
 }
 
@@ -67,47 +70,51 @@ body {
 .header {
     z-index: 99999;
     position:fixed;
-    top:0;
+    top:0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
     left:0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width:100%;
-    height:8vh;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.1);
-    transition:height 1s ease;
+    height:0px;
+    transition:height 1s ease, backdrop-filter 3s ease, background-color 1s ;
 }
 
 .nav {
-    margin:20px;
-    width:100vh;
+    width:20vw;
     display:flex;
     justify-content: space-evenly;
+    margin-right:20px;
     align-items: center;
     height:30px;
-    
+    margin-top: 25px;
+    transition: opacity 1s;
+    position:fixed;
+    right:3vw;   
 }
 
 .title {
-    font-family:'oswald';
-    font-size:45px;
-    width:20vw;
-    transition:color 2s ease, transform 2s ease;
+    position: fixed;
+    top:0;
+    font-family:'rogshire';
+    font-size:var(--header-fontsize_title);
     user-select: none;
     z-index: 99;
-    color:rgb(33, 33, 33);
+    color: var(--headerelem);
     margin-left: 10vw;
-    margin-right: 10vw;
-    top:0;
-    padding: 2px;
+    margin-right: 10vw;    
+    width:250px;
+    padding: 20px;       
 }
 
 
-
-.title:hover {
-    color:rgb(0, 0, 0); 
+.link {
+    text-decoration: none;
+    font-family: 'oswald';
+    font-size:var(--header-fontsize_links);
+    color:var(--headerelem);
+    cursor:none;
 }
+
 
 .hover-bold {
     padding: 1px;
@@ -115,19 +122,11 @@ body {
     font-weight:100;
 }
 .hover-bold:hover {
-    font-size: 45px;
-    font-optical-sizing: auto;
-    font-weight: 500; 
-     
+    font-size: 9vh;
+    font-weight: 900;     
 }
 
-.link {
-    text-decoration: none;
-    font-family: 'oswald';
-    font-size: 20px;
-    color:#000000;
-    cursor:none;
-}
+
 
 /* Header Ends */
 /* Body Starts */
@@ -168,7 +167,7 @@ body {
     transition: opacity var(--opacity-time) ease;
     border: 2px solid transparent;
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 
               
 }
@@ -180,230 +179,209 @@ body {
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;       
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s;      
 }
 .image-container > .image-3 {
     grid-area:6/5;
-    border:5px;
     width:600px;
     filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-4 {
     grid-area:6/2;
-    border:5px;
     width:500px;
     filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-5 {
     grid-area:10/1;
-    border:5px;
     width:600px;
     filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-6 {
     grid-area:8/3;
-    border:5px;
     width:500px;
     filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-7 {
     grid-area:4/2;
-    border:5px;
     width:400px;
     z-index: 2;
     filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 .image-container > .image-8 {
     grid-area:12/3;
-    border:5px;
     width:400px;
     z-index: 2;
     filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-9 {
     grid-area:14/8;
-    border:5px;
     width:600px;
     z-index: 2;
     filter:invert(0);
     opacity:var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 .image-container > .image-10 {
     grid-area: 17/6;
-    border: 5px;
     width: 600px;
     z-index: 2;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-11 {
     grid-area: 5/5;
-    border: 5px;
     width: 400px; 
     z-index: 3;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-12 {
     grid-area: 3/8;
-    border: 5px;
     width: 500px; 
     z-index: 4;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-13 {
     grid-area: 10/7;
-    border: 5px;
     width: 360px; 
     z-index: 5;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-14 {
     grid-area: 6/9;
-    border: 5px;
     width: 380px; 
     z-index: 6;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 .image-container > .image-15 {
     grid-area: 4/10;
-    border: 5px;
     width: 400px; 
     z-index: 7;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-16 {
     grid-area: 8/10;
-    border: 5px;
     width: 420px; 
     z-index: 8;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 5s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-17 {
     grid-area: 15/2;
-    border: 5px;
     width: 440px; 
     z-index: 9;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 2s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-18 {
     grid-area: 2/10;
-    border: 5px;
     width: 460px; 
     z-index: 90;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 2s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-19 {
     grid-area: 12/9;
-    border: 5px;
     width: 480px; 
     z-index: 11;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) ease, border 2s ease, filter 2s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-20 {
     grid-area: 6/9;
-    border: 5px;
     width: 500px; 
     z-index: 9;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) 2s ease, border 2s ease, filter 2s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s;  
 }
 
 .image-container > .image-21 {
     grid-area: 15/10;
-    border: 5px;
     width: 520px; 
     z-index: 13;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) 2s ease, border 2s ease, filter 2s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-22 {
     grid-area: 21/6;
-    border: 5px;
     width:700px; 
     z-index: 13;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) 2s ease, border 2s ease, filter 2s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s; 
 }
 
 .image-container > .image-23 {
     grid-area:20/2 ;
-    border: 5px;
     width: 600px; 
     z-index: 13;
     filter:invert(0);
     opacity: var(--opacity);
     box-sizing: border-box;
-    transition: opacity var(--opacity-time) 1s ease, border 2s ease, filter 2s ease;  
+    transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s;  
     margin-bottom:10vh;
 }
 
@@ -435,10 +413,11 @@ body {
     z-index:100;
     filter:blur(0px);
     opacity: 1; 
-    transition: opacity 1s, border 1s ease ;
+    
     backdrop-filter: blur(10px);
     filter:invert(1);
-    border:20px solid rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: opacity 1s, border 1s ease, transform 1s ;
 }
 /*  *//*  *//*  *//*  *//*  *//*  */
 /*  *//*  *//*  *//*  *//*  *//*  */
@@ -456,9 +435,11 @@ body {
     pointer-events: none;
     position: fixed;
     top:0;
-    opacity: 0.1;
+    opacity: 0;
     z-index: 1;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
+    font-family: oswald;
+    font-weight: 100;
 }
 
 .desc-1,
@@ -472,40 +453,51 @@ body {
 
 .desc-1 {
     font-size: 6.3vw;
-    top: 6vh;
-    left: 3vw;
+    opacity: 0;
     color: rgb(0, 0, 0);
     margin-left:10px;
+    font-weight:100;
+
+    top:40vh;
+    left:50vw;
 }
 
 .desc-2 {
     font-size: 5vw;
-    top:0vh;
-    left: 50vw;
     color: rgb(0, 0, 0);
+    font-weight:100;
+
+    top:40vh;
+    left:50vw;
 }
 
 .desc-3 {
     position: fixed;
     font-size: 6vw;
-    top: 46vh;
-    left: 30vw;
     color: #000000;
     z-index: 99999;
+    font-weight:100;
+
+    top:40vh;
+    left:50vw;
 }
 
 .desc-4 {
     font-size: 6vw;
-    top: 27.5vh;
-    left: 14vw;
     color: rgb(0, 0, 0);
+    font-weight:100;
+
+    top:40vh;
+    left:50vw;
 }
 
 .desc-5 {
-    font-size: 4.2vw;
-    top: 35vh;
-    left: 58vw;
+    font-size: 5vw;
     color: #000000;
+    font-weight:100;
+
+    top:50vh;
+    left:50vw;
 }
 
 .image-1:hover ~ .desc,
@@ -534,7 +526,8 @@ body {
     opacity: 0;
     transform: scale(0.9);
     transition: all 0.5s ease;
-    left:40vw;
+    left:50vw;
+    top:40vh;
 }
 
 .image-1:hover ~ .desc-1,
@@ -561,12 +554,14 @@ body {
 .image-22:hover ~ .desc-5,
 .image-23:hover ~ .desc-5 {
     opacity: 1;
-    transform: scale(1.09);
+    transform: scale(1.3);
     z-index: 999999;
-    transition: all 1s ease;
+    transition: transform 2s ease, z-index 0.1 s, top 2s, left 2s;
     position: fixed;
-    justify-content: center;
-    left:5vw;
+    font-weight: 900;
+
+    top:55vh;
+    left:50vw;
 }
 
 
@@ -576,117 +571,8 @@ body {
 /*  *//*  *//*  *//*  *//*  *//*  */
 /*  *//*  *//*  *//*  *//*  *//*  */
 
-/* DECORATORS */
-
-.dec {
-    font-family: "Cedarville Cursive", cursive;
-    font-weight: 200;
-    font-style: normal;
-    opacity: 0.7;
-    z-index: 9;
-    user-select:none;
-}
-.desc_1_dec {
-    position: fixed;
-    font-size: 2vw;
-    top:33vh ;
-    left:15vw ; 
-    color:rgb(187, 158, 158);
-    
-}
-.desc_2_dec {
-    position: fixed;
-    font-size: 1vw;
-    top:23vh ;
-    left:65vw ;
-    color:rgb(157, 157, 158);
-    
-}
-.desc_3_dec {
-    position: fixed;
-    font-size: 1vw;
-    top:77vh ;
-    left:60vw ; 
-    color:rgb(119, 132, 117);
-    
-}
-.desc_4_dec {
-    position: fixed;
-    font-size: 1vw;
-    top:57vh ;
-    left:30vw ; 
-    color:rgb(248, 164, 164);
-    
-}
-.desc_5_dec {
-    position: fixed;
-    font-size: 1vw;
-    top:55vh ;
-    left:70vw ; 
-    color:rgb(122, 124, 101);   
-}
-
-.image-1:hover ~ .dec,
-.image-2:hover ~ .dec,
-.image-3:hover ~ .dec,
-.image-4:hover ~ .dec,
-.image-5:hover ~ .dec,
-.image-6:hover ~ .dec,
-.image-7:hover ~ .dec,
-.image-8:hover ~ .dec,
-.image-9:hover ~ .dec,
-.image-10:hover ~ .dec,
-.image-11:hover ~ .dec,
-.image-12:hover ~ .dec,
-.image-13:hover ~ .dec,
-.image-14:hover ~ .dec,
-.image-15:hover ~ .dec,
-.image-16:hover ~ .dec,
-.image-17:hover ~ .dec,
-.image-18:hover ~ .dec,
-.image-19:hover ~ .dec,
-.image-20:hover ~ .dec,
-.image-21:hover ~ .dec,
-.image-22:hover ~ .dec,
-.image-23:hover ~ .dec {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: all 0.5s ease;
-    left:40vw;
-}
-.blur_footer{
-    position: fixed;
-    bottom:0;
-    left:0;
-    margin:0;
-    width: 100%;
-    z-index: 999;
-    background-color:rgb(45, 45, 45) ;
-    opacity: 0.2;
-    padding:5px;
-}
 
 
-.footer {
-    position: fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    text-align: center;
-    backdrop-filter: blur(20px);
-    z-index: 9999;
-    color: rgb(255, 255, 255);
-    font-family: oswald;
-    padding:5px;
-    user-select: none;
-}
-
-.footer .meme {
-    z-index: 9999;
-    position: fixed;
-    top:10vh;
-
-}
 
 @media screen and (max-width:600px) {
     

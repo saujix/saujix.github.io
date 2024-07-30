@@ -82,10 +82,10 @@ document.querySelector('.image-container').addEventListener('click', function(ev
       document.querySelector(`#${event.target.id}`).style.filter = 'invert(0)';
       removeCursorBackground();
       restorePointer();
-      blurBackground()
+      blurBackground()    
+      document.querySelector('#cursor-border').style.opacity = '0';
 
       
-      document.querySelector('#cursor-border').style.opacity = '0';
     } else if (getComputedStyle(document.querySelector(`#${event.target.id}`)).filter === 'invert(0)'){
       console.log('Clicked image class:', event.target.id);
       t = `#${event.target.id}`;
@@ -162,15 +162,5 @@ function blurBackground_oneway(){
     screensaver.style.filter = 'blur(0px)';
   } else {
   }
-}
-
-function centerEverythingVertically(){
-  console.log(`hi there ${t}`)
-
-  document.querySelector(`${t}`).style.position = 'absolute';
-  document.querySelector(`${t}`).style.top = '100px';
-  document.querySelector(`${t}`).style.right = '100px';
-
-  console.log('changed')
 }
 

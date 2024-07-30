@@ -735,3 +735,21 @@ body {
         transform: scale(1.1);    
     }
 }
+
+.topic2 {
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    z-index: 0;
+    top:0;
+    left:0;
+    font-family: 'rogshire';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:2px solid;
+    font-size:50px;
+    font-weight:300;
+    opacity: 0;
+    background-color: rgb(75, 120, 124);
+}

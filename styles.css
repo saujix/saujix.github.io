@@ -11,10 +11,10 @@
     src: url(fonts/Rogshiredemo.ttf) format('truetype');
 }
 
-html {
-    scroll-behavior: smooth;
+@font-face {
+    font-family: 'vogue';
+    src: url(fonts/Vogue.otf) format('opentype');
 }
-
 #cursor {
     position: fixed;
     top: -5px;
@@ -45,12 +45,6 @@ html {
 
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2500px;
     cursor: none;  
 }
 
@@ -64,8 +58,6 @@ body {
     position: fixed;
     top:-30px;
     left:-20px;
-    z-index: -1;
-    background-image:url();
     transition: background-Image 2s ease, filter 0.8s;
 
 }
@@ -78,12 +70,10 @@ body {
     z-index: 99999;
     position:fixed;
     top:0px;
+    left:0px;
     padding-top: 10px;
-    padding-bottom: 5px;
-    left:0;
     width:100%;
     transition:height 1s ease, backdrop-filter 1s ease, background-color 1s ;
-    right:50px;
 }
 
 .nav {
@@ -93,7 +83,7 @@ body {
     margin-right:20px;
     align-items: center;
     height:30px;
-    margin-top: 25px;
+    margin-top: 2px;
     transition: opacity 1s;
     position:fixed;
     right:3vw;
@@ -111,16 +101,14 @@ body {
     margin-left: 10vw;
     margin-right: 10vw;    
     width:250px;
-    padding: 20px;       
+    padding: 8px;       
 }
 
 
 .link {
     text-decoration: none;
-    font-family: 'oswald';
     font-size:var(--header-fontsize_links);
     color:var(--headerelem);
-    cursor:none;
 }
 
 
@@ -147,21 +135,6 @@ body {
         
 }
 
-.intro {
-    border: 1px solid;
-    padding: 10px;
-    position:absolute;
-    top:120px;
-    left:700px;
-    z-index: 9999;
-    backdrop-filter:blur(20px);
-    font-family: "Oswald";
-    font-size: 20px;
-    text-justify: center;
-    border-radius: 20px;
-    z-index: 99999;  
-
-}
 .image {
     border-radius: 20px;    
 }
@@ -170,7 +143,7 @@ body {
     grid-area:2/2;
     width:350px;
     z-index: 3;
-    filter:invert(0);
+    filter:invert(1);
     opacity: var(--opacity);
     box-sizing: border-box;
     transition: opacity var(--opacity-time) 0.5s ease, filter 2s ease, transform 2s;   
@@ -391,30 +364,6 @@ body {
     margin-bottom:10vh;
 }
 
-#b1,
-#b2, 
-#b3, 
-#b4, 
-#b5, 
-#b6, 
-#b7, 
-#b8, 
-#b9, 
-#b10, 
-#b11, 
-#b12, 
-#b13, 
-#b14, 
-#b15, 
-#b16, 
-#b17, 
-#b18, 
-#b19, 
-#b20, 
-#b21, 
-#b22{
-    font-weight: 100;
-  }
 
 /*  */
 .image-1:hover,
@@ -494,7 +443,7 @@ body {
     opacity: 0;
     z-index: 1;
     transition: all 1s ease;
-    font-family: "Playfair Display";
+    font-family: "vogue";
     font-weight: 100;
 }
 

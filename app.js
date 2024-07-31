@@ -41,10 +41,9 @@ document.querySelector('.image-container').addEventListener('click', function(ev
 
   function selectCurrent() {
     document.querySelector(`#${id}`).style.position = 'fixed';
-    document.querySelector(`#${id}`).style.top = '20vh';
+    document.querySelector(`#${id}`).style.top = '15vh';
     document.querySelector(`#${id}`).style.left = '10vw';
-    document.querySelector(`#${id}`).style.width = '25vw';
-    document.querySelector(`#${id}`).style.height = 'auto';
+    document.querySelector(`#${id}`).style.height = '75vh';
     applyBlur(); 
   }
 

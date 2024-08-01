@@ -118,6 +118,7 @@ body {
 .image {
     border-radius: 20px;
     transition: transform 0.5s;
+    top: -10px;
 }
 
 .blurblock1 {
@@ -135,7 +136,7 @@ body {
 /*  */
 .image:hover {
     transform: scale(1.1);
-    translate: filter 2s ease, ;
+    translate: filter 0.5s ease, ;
     z-index: 9999999999;
 }
 

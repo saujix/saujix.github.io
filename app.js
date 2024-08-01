@@ -10,7 +10,7 @@ function boldRandChar(){
   document.querySelector('#b4').style.fontWeight = '100';
   document.querySelector('#b5').style.fontWeight = '100';
   document.querySelector('#b6').style.fontWeight = '100';
-  if (document.querySelector(`#b${t}`).style.fontWeight = null){
+  if (document.querySelector(`#b${t}`).style.fontWeight === null){
 
   } else {
     document.querySelector(`#b${t}`).style.fontWeight = '900';
@@ -41,9 +41,9 @@ document.querySelector('.image-container').addEventListener('click', function(ev
 
   function selectCurrent() {
     document.querySelector(`#${id}`).style.position = 'fixed';
-    document.querySelector(`#${id}`).style.top = '15vh';
-    document.querySelector(`#${id}`).style.left = '10vw';
-    document.querySelector(`#${id}`).style.height = '75vh';
+    document.querySelector(`#${id}`).style.top = '25vh';
+    document.querySelector(`#${id}`).style.left = '8vw';
+    document.querySelector(`#${id}`).style.height = '50vh';
     applyBlur(); 
   }
 
@@ -76,13 +76,20 @@ document.querySelector('.image-container').addEventListener('click', function(ev
   console.log(currentState)
 
 
+  
 
-  if (currentState === 'active' ){
+
+  if (document.querySelector(`#${id}`).style.top === '25vh' ){
     deselectAll();
-    
+    var min = new Audio("sounds/min.mp3")
+    min.play();   
     
   } else {
+    var max = new Audio("sounds/max.mp3")
+    max.play();
+    deselectAll();
     selectCurrent();
+
   }
   
 });
@@ -95,5 +102,12 @@ function loop(word){
     
   })
   }
+function enterAudio() {
+  var scroll = new Audio("sounds/scroll.mp3");
+  scroll.play();
+  console.log(!max.paused)
+}
+
+
 
 

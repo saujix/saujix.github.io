@@ -1,13 +1,16 @@
 function changeBg(){
     let t= event.target.id;
     if (t === "pictures"){
-        document.querySelector(".i3").classList.add("visible");  
+        document.querySelector(".i3").classList.add("visible");
+        document.querySelectorAll(".list").style.color="white"  
     } else if (t === "professional"){
         document.querySelector(".i2").classList.add("visible");  
         document.body.style.color="white"
+        document.querySelectorAll(".list").style.color="white"
     } else if(t === "blog"){
         document.querySelector(".i1").classList.add("visible");  
         document.body.style.color="black"
+        document.querySelectorAll(".list").style.color="black"
     }
 }  
 function restoreBg(){
@@ -40,15 +43,12 @@ async function completeName() {
         document.querySelector("#name").innerHTML += "?";
     }
 };
-function restoreName(){
-    let status = 1;
-    while (status === 1){
-        if (document.querySelector("#name").innerHTML=== "Akshat P."){
-            status = 0;
-        } else{
-            t = document.querySelector("#name").innerHTML;
-            document.querySelector("#name").innerHTML = t;
-        }
+function restoreName() {
+    const targetName = "Akshat P.";
+    let element = document.querySelector("#name");
+    if (element.innerHTML === targetName) {
+        clearInterval(intervalId);
+    } else {
+        element.innerHTML = targetName;
     }
-
 }

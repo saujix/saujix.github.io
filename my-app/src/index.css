@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+body{
+  margin:0;
+  font-family: "Viaoda Libre", serif;
+}
+.button{
+  margin:0;
+  font-family: "Viaoda Libre", serif;
+  font-size: 20px;
+  border:none;
+  transition: all 0.5s;
+}
+.button:hover{
+  background-color: black;
+  color:white;
+  transition: all 0.5s;
+}
+
+.container{
+  width:100vw;
+  height:100vh;
+  background-color: #8181f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  height : 700px;
+  width:800px;
+  background-color: blue;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  
+}
+
+.photosButton{
+  grid-area: 1/2/2/4;
+  /* background-color: red; */
+}
+.resumeButton{
+  grid-area: 1/4/2/6;
+  /* background-color: pink; */
+}
+.eventsButton{
+  grid-area: 1/6/2/8;
+  /* background-color: rgb(120, 56, 66); */
+}
+.fun{
+  grid-area: 1/8/2/10;
+  /* background-color: rgb(186, 201, 28); */
+}
+.data{
+  grid-area: 2/2/20/10;
+  background-color: rgb(239, 239, 239);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  width: 80%;
+}
+
+.wip {
+  display: none;
+}
+
+@media (max-width:800px){
+  .container{
+    filter: blur(50px);
+  }
+
+  /* remove this if developed for mobile */
+  .wip{
+    display: block;
+    position: absolute;
+    top:0;
+    height:100vh;
+    width:100vw;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .wip img{
+    width:50%;
+  }
+  /* remove end here */
+}
+

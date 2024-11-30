@@ -1,20 +1,22 @@
 import './App.css'
 import logo from './logo.png';
+import Photos from './photos';
+import Home from './Home';
 
 function Box(){
   return(
   <>
-        <button className='button photosButton'>
+        <button className='button photosButton' onClick={Photos}>
           Photos
         </button>
-        <button className='button resumeButton'>
+        <button className='button resumeButton' >
           Me
         </button>
         <button className='button eventsButton'>
           Events
         </button>
-        <button className='button fun'>
-          cmon
+        <button className='button fun' onClick={Home}>
+          home
         </button>
   
   <div className='data'>

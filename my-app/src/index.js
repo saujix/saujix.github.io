@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Box from './App';
 import wip from './wip.png';
+import harry from './images/harry.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
@@ -19,8 +21,17 @@ root.render(
 
 
   <div className='container'>
+    <div className='contact'>
+      <a href='https://www.instagram.com/akshat.pasbola/'>hi</a>
+
+      <a href=''></a>
+      <a href=''></a>
+    </div>
     <div className='box'>
       <Box />
+    </div>
+    <div className='bottomRight'>
+      <img src={harry} height="200px"></img>
     </div>
   </div>
 

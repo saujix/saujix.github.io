@@ -3,6 +3,7 @@
 body{
   margin:0;
   font-family: "Viaoda Libre", serif;
+  padding: 0;
 }
 .button{
   margin:0;
@@ -20,10 +21,11 @@ body{
 .container{
   width:100vw;
   height:100vh;
-  background-color: #8181f8;
+  background-color: #889aea;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .box{
   height : 700px;
@@ -32,7 +34,21 @@ body{
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(20, 1fr);
+  z-index: 1;
   
+}
+
+.bottomRight{
+  position: absolute;
+  bottom: 0px;
+  right:0;
+  margin:0;
+  z-index: 0;
+}
+
+.bottomRight img{
+  margin:0;
+  padding: 0;
 }
 
 .photosButton{
@@ -66,8 +82,6 @@ body{
 .wip {
   display: none;
 }
-
-
 
 @media (max-width:800px){
   .container{

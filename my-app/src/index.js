@@ -4,7 +4,6 @@ import './index.css';
 import Box from './App';
 import wip from './wip.png';
 import harry from './images/harry.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
@@ -22,7 +21,12 @@ root.render(
 
   <div className='container'>
     <div className='contact'>
-      <a href='https://www.instagram.com/akshat.pasbola/'>hi</a>
+      <div className='links'>
+        <a href='https://www.instagram.com/akshat.pasbola/'>____|_INSTAGRAM_</a>
+        <a href='https://www.instagram.com/akshat.pasbola/'>|_GITHUB_|</a>
+        <a href='https://www.linkedin.com/in/akshatpasbola/'>_LINKEDIN_|____</a>
+      </div>
+      
 
       <a href=''></a>
       <a href=''></a>

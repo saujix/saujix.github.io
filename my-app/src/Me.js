@@ -18,11 +18,11 @@ export default function Me(){
         
 
         <h4>
-        <h1>Course :</h1> Computer Science
+        <h1>Course :</h1> Computer Science (TU856)
         </h4>
 
         <h6>
-        Website made using React, fuck React btw.
+        Website made using React, fuck React.
         </h6>
 
         

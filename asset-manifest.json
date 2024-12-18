@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ea80c3cd.css",
-    "main.js": "/static/js/main.481df56d.js",
+    "main.css": "/static/css/main.2bd0f92c.css",
+    "main.js": "/static/js/main.ba493e63.js",
     "static/media/Photo Nov 3 2024 (1).jpg": "/static/media/Photo Nov 3 2024 (1).228b4f90563c6da0c145.jpg",
     "static/media/Nov 27 2024.jpg": "/static/media/Nov 27 2024.61a0eeb10e7e6377ab49.jpg",
     "static/media/Sept 3 2024.jpg": "/static/media/Sept 3 2024.a230311bd690313e123b.jpg",
@@ -39,15 +39,14 @@
     "static/media/Photo Oct 22 2024 Effects.jpg": "/static/media/Photo Oct 22 2024 Effects.1799142accf26af1ec2f.jpg",
     "static/media/Photo Aug 19 2024.jpg": "/static/media/Photo Aug 19 2024.da7a4a3e5021917edefd.jpg",
     "static/media/Photo Aug 22 2024.jpg": "/static/media/Photo Aug 22 2024.f4dfbf37eed4877b7d58.jpg",
-    "static/media/harry.png": "/static/media/harry.2711a827d5ded31becd0.png",
     "static/media/logo.png": "/static/media/logo.3e49d38d9e413c66b990.png",
     "static/media/wip.png": "/static/media/wip.9f4d820540b03f0c3474.png",
     "index.html": "/index.html",
-    "main.ea80c3cd.css.map": "/static/css/main.ea80c3cd.css.map",
-    "main.481df56d.js.map": "/static/js/main.481df56d.js.map"
+    "main.2bd0f92c.css.map": "/static/css/main.2bd0f92c.css.map",
+    "main.ba493e63.js.map": "/static/js/main.ba493e63.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea80c3cd.css",
-    "static/js/main.481df56d.js"
+    "static/css/main.2bd0f92c.css",
+    "static/js/main.ba493e63.js"
   ]
 }
